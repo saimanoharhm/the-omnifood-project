@@ -33,11 +33,13 @@ Paragraph default: 1.6
 - Greys
 #555
 #333
+#6f6f6f lightest grey allowed on #fdf2e9 
 
 --- 03 SHADOWS
 
 --- 04 BORDER RADIUS
 Defaults: 9px
+Medium: 11px
 
 --- 05 WHITESPACE 
 
@@ -70,6 +72,7 @@ MAIN CoLOR: #e67e22
 ::-webkit-scrollbar-thumb {
   background: #e67e22;
   border-radius: 10px;
+  transition: all 0.3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -125,6 +128,15 @@ body {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
+  /* margin-bottom: 9.6rem; */
+}
+
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {
@@ -219,6 +231,55 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.2rem;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+/* HELPER/SETTINGS CLASSES */
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
 }
