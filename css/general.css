@@ -15,6 +15,7 @@ Default: 1
 Small: 1.05
 Medium: 1.2
 Paragraph default: 1.6
+Large: 1.8
 
 - LETTER SPACING
 -0.5px
@@ -94,6 +95,7 @@ html {
   */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 /* ------------------------ */
@@ -105,6 +107,10 @@ body {
   line-height: 1;
   font-weight: 400;
   border-bottom: 8px solid #e67e22;
+
+  /* Only works if there is nothing absolutely positioned in relation to body */
+  /* Using this for mobile navbar */
+  overflow-x: hidden;
 }
 
 /* .test { */
@@ -287,6 +293,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {
